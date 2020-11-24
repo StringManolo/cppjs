@@ -24,6 +24,11 @@ std::vector<std::string> split(std::string text, std::string pattern) {
 
 
 
-/* add "".replace(); */
+std::string replace(std::string text, std::string pattern, std::string replacement) {
+  text.replace(text.find(pattern), pattern.size(), replacement);
+  return text;
+}
+
+
 /* add "".substr(); */
-/* add "".substring();b*/
+/* add "".substring(); */

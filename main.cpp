@@ -21,5 +21,8 @@ int main(int argc, char *argv[]) {
   for(let i = 0; i < myCsv.size(); ++i) {
     console.log("CSV N°", i+1 , ":", myCsv[i]);
   }
+
+  console.log("Replacing hola from hola world to hello:", 
+  replace("hola world!", "hola", "hello"));
   return 0;
 }
