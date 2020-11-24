@@ -4,6 +4,7 @@ Some Javascript Sintax Sugar for C++
 ### Example:
 ```
 #include "./headers.h"
+#include <vector>
 
 int main(int argc, char *argv[]) {
 
@@ -19,8 +20,17 @@ int main(int argc, char *argv[]) {
   fetchOptions.method = "POST";
   fetchOptions.data = "name=StringManolo&pass=123";
   myHtml = fetch("https://example.com");
-  console.log("Post Request return:", myHtml);
+  console.log("Post Request return:", myHtml); 
 
+  let myCsv = split("car, bike, motorbike, truck, airplane", ", ");
+  for(let i = 0; i < myCsv.size(); ++i) {
+    console.log("CSV N°", i+1 , ":", myCsv[i]);
+  }
+
+  console.log("Replacing hola from hola world to hello:",
+  replace("hola world!", "hola", "hello"));
+
+  console.log("CSV string:", join(myCsv, ","));
   return 0;
 }
 ```
