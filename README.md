@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
   fetchOptions.method = "POST";
   fetchOptions.data = "name=StringManolo&pass=123";
   myHtml = fetch("https://example.com");
-  console.log("Post Request return:", myHtml); 
+  console.log("Post Request return:", myHtml);
 
   let myCsv = split("car, bike, motorbike, truck, airplane", ", ");
   for(let i = 0; i < myCsv.size(); ++i) {
@@ -31,6 +31,18 @@ int main(int argc, char *argv[]) {
   replace("hola world!", "hola", "hello"));
 
   console.log("CSV string:", join(myCsv, ","));
+
+
+  for(let vehicle in myCsv) {
+    console.log("Vehicle:", vehicle);
+  }
+
+  let add = function(let num1, let num2) {
+    return num1 + num2;
+  };
+
+  console.log("Add 7 + 8 using function:", add(7,8));
+
   return 0;
 }
 ```
