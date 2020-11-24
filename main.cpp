@@ -28,10 +28,15 @@ int main(int argc, char *argv[]) {
   console.log("CSV string:", join(myCsv, ","));
 
 
-  for(let vehicles in myCsv) {
-    console.log("Vehicle:", vehicles);
+  for(let vehicle in myCsv) {
+    console.log("Vehicle:", vehicle);
   }
 
+  let add = function(let num1, let num2) {
+    return num1 + num2;
+  };
+
+  console.log("Add 7 + 8 using function:", add(7,8));
 
   return 0;
 }
