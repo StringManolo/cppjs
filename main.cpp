@@ -1,5 +1,5 @@
 #include "./headers.h"
-#include <functional>
+
 int main(int argc, char *argv[]) {
 
   let word = "world";
@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   var a = 12;
   console.log("a:", a);
 
-  let myHtml = fetch("https://foro.elhacker.net");
+  let myHtml = fetch("https://example.com");
   console.log("Example Code:", myHtml);
   return 0;
 }
