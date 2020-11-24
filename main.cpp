@@ -26,5 +26,12 @@ int main(int argc, char *argv[]) {
   replace("hola world!", "hola", "hello"));
 
   console.log("CSV string:", join(myCsv, ","));
+
+
+  for(let vehicles in myCsv) {
+    console.log("Vehicle:", vehicles);
+  }
+
+
   return 0;
 }
