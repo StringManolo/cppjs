@@ -22,6 +22,17 @@ std::vector<std::string> split(std::string text, std::string pattern) {
   return lines;
 }
 
+std::string join(std::vector<std::string> text, std::string replacement) {
+  std::string aux = "";
+  for (int i = 0; i < text.size(); ++i) {
+    if (i + 1 != text.size()) {
+      aux += text[i] + replacement;
+    } else {
+      aux += text[i];
+    }
+  }
+  return aux;
+}
 
 
 std::string replace(std::string text, std::string pattern, std::string replacement) {

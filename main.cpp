@@ -24,5 +24,7 @@ int main(int argc, char *argv[]) {
 
   console.log("Replacing hola from hola world to hello:", 
   replace("hola world!", "hola", "hello"));
+
+  console.log("CSV string:", join(myCsv, ","));
   return 0;
 }
