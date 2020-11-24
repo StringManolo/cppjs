@@ -27,7 +27,7 @@ Compile Termux:
 + First Time:
 ```
 mkdir ~/../usr/myPrograms && cd ~/../usr/myPrograms && git clone https://github.com/StringManolo/cppjs.git && cd cppjs
-pkg install libcurl && okg install termux-elf-cleaner && ./compile
+pkg install libcurl && pkg install termux-elf-cleaner && ./compile
 ```
 
 
