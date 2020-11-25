@@ -1,7 +1,7 @@
 #include "./headers.h"
 #include <vector>
 
-int main(int argc, char *argv[]) {
+int main(args) {
 
   let word = "world";
   console.log("Hello", word, "!");
@@ -37,6 +37,6 @@ int main(int argc, char *argv[]) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
-
+  
   return 0;
 }
