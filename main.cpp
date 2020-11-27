@@ -9,13 +9,18 @@ int main(ARGUMENTS) {
   var a = 12;
   console.log(a);
   
+  let test = 6*8;
+  console.log(test);
+
+
   //console.log("a:", a);
-/*
+
   let myHtml = fetch("https://example.com");
   console.log("Example Code:", myHtml);
+  console.log(myHtml);
 
   fetchOptions.method = "POST";
-  fetchOptions.data = "name=StringManolo&pass=123";
+  fetchOptions.data = "name=StringManolo&pass=123"; 
   myHtml = fetch("https://example.com");
   console.log("Post Request return:", myHtml);
 
@@ -23,6 +28,9 @@ int main(ARGUMENTS) {
   for(let i = 0; i < myCsv.size(); ++i) {
     console.log("CSV N°", i+1 , ":", myCsv[i]);
   }
+
+
+  console.log(myCsv);
 
   console.log("Replacing hola from hola world to hello:", 
   replace("hola world!", "hola", "hello"));
@@ -39,6 +47,6 @@ int main(ARGUMENTS) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
- */ 
+  
   return 0;
 }
