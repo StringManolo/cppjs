@@ -1,3 +1,5 @@
 #pragma once
 
-#define var auto
+#include <any>
+
+#define var std::any

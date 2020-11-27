@@ -1,14 +1,16 @@
 #include "./headers.h"
 #include <vector>
 
-int main(args) {
+int main(ARGUMENTS) {
 
-  let word = "world";
-  console.log("Hello", word, "!");
+ /* let word = "world";
+  console.log("Hello", word, "!");*/
   
   var a = 12;
-  console.log("a:", a);
-
+  console.log(a);
+  
+  //console.log("a:", a);
+/*
   let myHtml = fetch("https://example.com");
   console.log("Example Code:", myHtml);
 
@@ -37,6 +39,6 @@ int main(args) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
-  
+ */ 
   return 0;
 }

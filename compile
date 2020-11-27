@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-g++ -o program main.cpp -lcurl && termux-elf-cleaner program && ./program
+g++ -o program main.cpp -lcurl -std=c++17 && termux-elf-cleaner program && ./program
