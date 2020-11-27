@@ -12,7 +12,9 @@ int main(ARGUMENTS) {
   let test = 6*8;
   console.log(test);
 
-
+  a = "testeo";
+  console.log(a);
+/*
   //console.log("a:", a);
 
   let myHtml = fetch("https://example.com");
@@ -47,6 +49,6 @@ int main(ARGUMENTS) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
-  
+*/ 
   return 0;
 }
