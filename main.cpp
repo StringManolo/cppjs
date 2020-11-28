@@ -3,23 +3,20 @@
 
 int main(ARGUMENTS) {
 
- /* let word = "world";
-  console.log("Hello", word, "!");*/
+  let word = "world";
+  console.log("Hello", word, "!");
   
   var a = 12;
   console.log(a);
-  
+ 
+  a = "hello";
+  console.log(a);
+
   let test = 6*8;
   console.log(test);
 
-  a = "testeo";
-  console.log(a);
-/*
-  //console.log("a:", a);
-
   let myHtml = fetch("https://example.com");
   console.log("Example Code:", myHtml);
-  console.log(myHtml);
 
   fetchOptions.method = "POST";
   fetchOptions.data = "name=StringManolo&pass=123"; 
@@ -33,7 +30,6 @@ int main(ARGUMENTS) {
 
 
   console.log(myCsv);
-
   console.log("Replacing hola from hola world to hello:", 
   replace("hola world!", "hola", "hello"));
 
@@ -49,6 +45,5 @@ int main(ARGUMENTS) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
-*/ 
   return 0;
 }

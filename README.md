@@ -1,6 +1,15 @@
 # cppjs
 Some Javascript Sintax Sugar for C++
 
+### Notice:
+Since you can't declare global variables inside a function, the var keyword has nothing to do with var in javascript. The var keyword here is used as an alternative where the let keyword does not work.  
+var allow you to reasign the same variable to other data types.  
+When using let you may need to declare a new variable.  
+You should use let where you can, since most functions are designed to work with specific data types, where var is a unique data type holding other type inside.  
+
+Remember the purpouse of this library is not trying to implement javascript language, transpile or be a engine. It's made to program in C++, but using a short sintax and higher level approach.  
+If you want to develop using full javascript you should go for node.js, deno, quickjs, ducktape...
+
 ### Example:
 ```
 #include "./headers.h"
@@ -13,6 +22,9 @@ int main(int argc, char *argv[]) {
 
   var a = 12;
   console.log("a:", a);
+
+  a = "Hello!";
+  console.log(a);
 
   let myHtml = fetch("https://example.com");
   console.log("Example Code:", myHtml);
