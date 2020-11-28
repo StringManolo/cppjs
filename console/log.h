@@ -9,68 +9,81 @@
 struct {
   std::any aux;
 
+  template<typename T, typename...Args>
+  static void log(T&& t, Args&&... args) {
+
+    log(t);
+    log(std::forward<Args>(args)...);
+    if(sizeof...(args) > 1) {
+
+    } else {
+      std::cout << "\n";
+    }
+
+  }
+
   static void log(std::string arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(bool arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(short int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(unsigned short int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(unsigned int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(long int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(unsigned long int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(long long int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(unsigned long long int arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(float arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(double arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(char arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(unsigned char arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(wchar_t arg) {
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(const char* arg) {	
-    std::cout << arg << std::endl;
+    std::cout << arg;
   }
 
   static void log(std::vector<std::string> arg) {
@@ -216,68 +229,68 @@ struct {
 
       try {
 	std::any_cast<std::string>(t);
-        std::cout << "ANY: " << std::any_cast<std::string>(t) << std::endl;
+        std::cout /* ANY */<< std::any_cast<std::string>(t) << std::endl;
       } catch (const std::bad_any_cast& a) {
         //std::cout << a.what() << '\n';
 	try {
 	  std::any_cast<int>(t);
-          std::cout << "ANY: " << std::any_cast<int>(t) << std::endl;
+          std::cout /* ANY */<< std::any_cast<int>(t) << std::endl;
         } catch (const std::bad_any_cast& b) {
           try {
 	    std::any_cast<bool>(t);
-	    std::cout << "ANY: " << std::any_cast<bool>(t) << std::endl;
+	    std::cout /* ANY */<< std::any_cast<bool>(t) << std::endl;
 	  } catch (const std::bad_any_cast& c) {
 	    try {
 	      std::any_cast<short int>(t);
-	      std::cout << "ANY: " << std::any_cast<short int>(t) << std::endl;
+	      std::cout /* ANY */<< std::any_cast<short int>(t) << std::endl;
 	    } catch (const std::bad_any_cast& d) {
               try {
 	        std::any_cast<unsigned short int>(t);
-		std::cout << "ANY: " << std::any_cast<unsigned short int>(t) << std::endl;
+		std::cout /* ANY */<< std::any_cast<unsigned short int>(t) << std::endl;
 	      } catch (const std::bad_any_cast& e) {
                 try {
 		  std::any_cast<unsigned int>(t);
-		  std::cout << "ANY: " << std::any_cast<unsigned int>(t) << std::endl;
+		  std::cout /* ANY */<< std::any_cast<unsigned int>(t) << std::endl;
 		} catch (const std::bad_any_cast& f) {
                   try {
                     std::any_cast<long int>(t);
-		    std::cout << "ANY: " << std::any_cast<long int>(t) << std::endl;
+		    std::cout /* ANY */<< std::any_cast<long int>(t) << std::endl;
 		  } catch (const std::bad_any_cast& g) {
                     try {
 		      std::any_cast<unsigned long int>(t);
-		      std::cout << "ANY: " << std::any_cast<unsigned long int>(t) << std::endl;
+		      std::cout /* ANY */<< std::any_cast<unsigned long int>(t) << std::endl;
 		    } catch (const std::bad_any_cast& h) {
                       try {
                         std::any_cast<long long int>(t);;
-			std::cout << "ANY: " << std::any_cast<long long int>(t) << std::endl;
+			std::cout /* ANY */<< std::any_cast<long long int>(t) << std::endl;
 		      } catch (const std::bad_any_cast& i) {
                         try {
                           std::any_cast<unsigned long long int>(t);
-			  std::cout << "ANY: " << std::any_cast<unsigned long long int>(t) << std::endl;
+			  std::cout /* ANY */<< std::any_cast<unsigned long long int>(t) << std::endl;
 		        } catch (const std::bad_any_cast& j) {
                           try {
                             std::any_cast<float>(t);
-			    std::cout << "ANY: " << std::any_cast<float>(t) << std::endl;
+			    std::cout /* ANY */<< std::any_cast<float>(t) << std::endl;
 			  } catch (const std::bad_any_cast& k) {
                             try {
 			      std::any_cast<double>(t);
-			      std::cout << "ANY: " << std::any_cast<double>(t) << std::endl;
+			      std::cout /* ANY */<< std::any_cast<double>(t) << std::endl;
 			    } catch (const std::bad_any_cast& l) {
                               try {
                                 std::any_cast<char>(t);
-				std::cout << "ANY: " << std::any_cast<char>(t) << std::endl;
+				std::cout /* ANY */<< std::any_cast<char>(t) << std::endl;
 			      } catch (const std::bad_any_cast& m) {
                                 try {
                                   std::any_cast<unsigned char>(t);
-				  std::cout << "ANY: " << std::any_cast<unsigned char>(t) << std::endl;
+				  std::cout /* ANY */<< std::any_cast<unsigned char>(t) << std::endl;
 			        } catch (const std::bad_any_cast& n) {
                                   try {
 				    std::any_cast<wchar_t>(t);
-				    std::cout << "ANY: " << std::any_cast<wchar_t>(t) << std::endl;
+				    std::cout /* ANY */<< std::any_cast<wchar_t>(t) << std::endl;
 				  } catch (const std::bad_any_cast& o) {
 		                    try {
 				      std::any_cast<const char*>(t);
-				      std::cout << "ANY: " << std::any_cast<const char*>(t) << std::endl;
+				      std::cout /* ANY */<< std::any_cast<const char*>(t) << std::endl;
 
 				    } catch (const std::bad_any_cast& p) {
 				      std::cout << a.what() << '\n'; 
@@ -303,8 +316,5 @@ struct {
     }
   }
 
-  template<typename T, typename...Args>
-  static void log(T&& t, Args&&... args) {
-    log(std::forward<Args>(args)...);
-  }
+
 } console;
