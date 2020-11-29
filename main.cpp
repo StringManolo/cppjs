@@ -1,16 +1,6 @@
 #include "./headers.h"
 #include <vector>
 
-let newAccount = function(let num, let nam, let lnam, let tbal) {
-  object account {
-    {"number", num},
-    {"name", nam},
-    {"lastname", lnam},
-    {"totalBalance", tbal}
-  };
-  return account;
-};
-
 int main(ARGUMENTS) {
 
 
@@ -24,14 +14,15 @@ int main(ARGUMENTS) {
   console.log(a);
 
   let test = 6*8;
-  console.log(test, "");
+  console.log(test, ""); 
 
-  let myHtml = fetch("https://example.com");
+  let myHtml = fetch("http://example.com");
+  console.log("Downloaded!");
   console.log("Example Code:", myHtml);
 
   fetchOptions.method = "POST";
   fetchOptions.data = "name=StringManolo&pass=123"; 
-  myHtml = fetch("https://example.com");
+  myHtml = fetch("http://example.com");
   console.log("Post Request return:", myHtml);
 
   let myCsv = split("car, bike, motorbike, truck, airplane", ", ");
@@ -39,9 +30,7 @@ int main(ARGUMENTS) {
     console.log("CSV N°", i+1 , ":", myCsv[i]);
   }
 
-
   console.log(myCsv);
-
 
   console.log("Replacing hola from hola world to hello:", 
   replace("hola world!", "hola", "hello"));
@@ -61,12 +50,6 @@ int main(ARGUMENTS) {
   };
 
   console.log("Add 7 + 8 using function:", add(7,8));
-
-
-  let myAcc = newAccount(15162839173817, "Manolo", "String", 23.15);
- 
-  console.log("Account N° ", myAcc["number"], "\nName: ", myAcc["name"], " ", myAcc["lastname"], "\nTotal Balance: ", myAcc["totalBalance"], "$."); 
-  //console.log("Account N° ", "13");
 
 
   return 0;
